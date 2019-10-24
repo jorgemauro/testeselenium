@@ -11,7 +11,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "s-test": "mocha ./src/test/index.js --timeout 20000",
+    "selenium": "mocha  ./src/test/index.js --timeout 10000 --bail --compilers js:babel-core/register --require babel-polyfill "
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +29,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "chromedriver": "^77.0.0",
+    "geckodriver": "^1.18.0",
+    "mocha": "^6.2.1",
+    "selenium-webdriver": "^4.0.0-alpha.5"
   }
 }
